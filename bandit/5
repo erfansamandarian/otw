@@ -1,0 +1,21 @@
+HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
+
+  ------------------
+  human-readable
+  1033 bytes in size
+  not executable
+  ------------------
+
+file */{.,}* | grep "ASCII text" | grep -v ', with very long lines'
+
+  maybehere10/.file2:       ASCII text
+  maybehere15/.file2:       ASCII text
+  maybehere01/-file2:       ASCII text
+  maybehere08/spaces file1: ASCII text
+  maybehere12/-file2:       ASCII text
+  maybehere15/spaces file2: ASCII text
+  maybehere18/-file2:       ASCII text
+
+file */{.,}* | grep "ASCII text" | grep -v ', with very long lines' | du -b -a | grep 1033
+
+  1033	./maybehere07/.file2
